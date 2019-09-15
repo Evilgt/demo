@@ -33,6 +33,7 @@ public class LoginController {
 			List<User> list = userService.getAlluser();
 			redisTemplate.opsForValue().set(session.getId(),list,30, TimeUnit.MINUTES);
 			System.out.println("8001");
+		    System.out.println("12345");
 			return list;
 	}
 
